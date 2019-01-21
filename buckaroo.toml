@@ -1,1 +1,5 @@
 targets = [ "//:serialization" ]
+
+[[dependency]]
+package = "github.com/buckaroo-pm/boost-utility"
+version = "branch=master"
