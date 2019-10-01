@@ -1,0 +1,23 @@
+load("//buckaroo:defs.bzl", "buckaroo_deps")
+
+cc_library(
+  name = "serialization",
+  includes = [
+    "include",
+    "src",
+  ],
+  hdrs = glob([
+    "include/**/*.hpp",
+    "include/**/*.ipp",
+    "include/**/*.inl",
+  ]),
+  srcs = glob([
+    "src/**/*.cpp",
+    "src/**/*.hpp",
+    "src/**/*.ipp",
+  ]),
+  deps = buckaroo_deps(),
+  visibility = [
+    '//visibility:public',
+  ],
+)
